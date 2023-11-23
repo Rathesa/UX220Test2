@@ -11,13 +11,15 @@
     <script>
         class NumberofDaysToNewYears extends HTMLElement {
             connectedCallback() {
-                let today = new Date();
-                let nNewYearsEve = new Date(today.getFullYear(), 11, 31);
-                let nSeconds = 1000 * 60 * 60 * 24;
-                let nDaysLeft = Math.ceil((nNewYearsEve.getTime() - today.getTime()) / (nSeconds));
-                this.innerHTML = nDaysLeft;
-            }
-        }
+                                    let NumberofDaysToNewYears = new Date();
+                                    let nNewYearsEve = new Date(NumberofDaysToNewYears.getFullYear(), 11, 31);   // December (11) 31st 
+                                    let nSeconds = 1000 * 60 * 60 * 24;  //
+                                    let nDaysLeft = Math.ceil((nNewYearsEve.getTime() - NumberofDaysToNewYears.getTime()) / (nSeconds));
+                                    this.innerHTML = nDaysLeft;
+                                 }
+       
+       
+         }
         customElements.define("x-days-to-newyears", NumberofDaysToNewYears);
     </script>
 </body>
