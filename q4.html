@@ -5,11 +5,11 @@
 </head>
 
 <body>
-    <h1>There are <x-days-to-newyears></x-days-to-newyears> day(s) left until the new year in the Gregorian calendar.
-    </h1>
+    <h1>There are <x-days-to-newyears></x-days-to-newyears> day(s) left until the new year in the Gregorian calendar. </h1>
 
     <script>
         class NumberofDaysToNewYears extends HTMLElement {
+            
             connectedCallback() {
                                     let NumberofDaysToNewYears = new Date();
                                     let nNewYearsEve = new Date(NumberofDaysToNewYears.getFullYear(), 11, 31);   // December (11) 31st 
@@ -20,6 +20,7 @@
        
        
          }
+
         customElements.define("x-days-to-newyears", NumberofDaysToNewYears);
     </script>
 </body>
